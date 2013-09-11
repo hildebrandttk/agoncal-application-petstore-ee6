@@ -1,4 +1,13 @@
+
+
 # Application - Petstore Java EE 6
+
+## Changes on this branch
+* *Author* : [Stefan Hildebrandt](http://consulting.hildebrandt.tk)
+* Some fixes and Updates
+* Adding some example tests with [geb](http://gebish.org)
+
+## Original documentation
 
 * *Author* : [Antonio Goncalves](http://www.antoniogoncalves.org)
 * *Level* : Intermediate
