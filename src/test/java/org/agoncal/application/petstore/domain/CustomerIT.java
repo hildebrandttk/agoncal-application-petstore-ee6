@@ -1,5 +1,9 @@
 package org.agoncal.application.petstore.domain;
 
+import javax.inject.Inject;
+import javax.validation.Validator;
+
+import org.agoncal.application.petstore.exception.ValidationException;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -7,10 +11,6 @@ import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import javax.inject.Inject;
-import javax.validation.Validator;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -33,7 +33,8 @@ public class CustomerIT {
     @Deployment
     public static JavaArchive jar() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClasses(Category.class, Address.class)
+           .addClass(ValidationException.class)
+                .addClasses(Category.class, Address.class, Customer.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
