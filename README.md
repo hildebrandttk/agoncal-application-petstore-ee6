@@ -4,8 +4,8 @@
 
 ## Changes on this branch
 * *Author* : [Stefan Hildebrandt](http://consulting.hildebrandt.tk)
-* Some fixes and Updates
-* Adding some example tests with [geb](http://gebish.org)
+* Some example tests with [geb](http://gebish.org)
+* Some fixes and updates
 
 ## Original documentation
 
