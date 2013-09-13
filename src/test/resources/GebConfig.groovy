@@ -1,6 +1,10 @@
+import org.openqa.selenium.Dimension
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.firefox.FirefoxProfile
+import org.openqa.selenium.phantomjs.PhantomJSDriver
+import org.openqa.selenium.remote.DesiredCapabilities
+
 //import org.openqa.selenium.phantomjs.PhantomJSDriver
 reportsDir = "target/test-reports/geb"
 
@@ -45,15 +49,15 @@ waiting {
 }
 
 environments {
-//   'phantomjs' {
-//      driver = {
-//         final capabilities = new DesiredCapabilities()
-//         capabilities.setCapability("phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36")
-//         final phantomJSDriver = new PhantomJSDriver(capabilities)
-//         phantomJSDriver.manage().window().setSize(new Dimension(1028, 768))
-//         return phantomJSDriver
-//      }
-//   }
+   'phantomjs' {
+      driver = {
+         final capabilities = new DesiredCapabilities()
+         capabilities.setCapability("phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36")
+         final phantomJSDriver = new PhantomJSDriver(capabilities)
+         phantomJSDriver.manage().window().setSize(new Dimension(1028, 768))
+         return phantomJSDriver
+      }
+   }
    chrome {
       driver = {
          final chromeDriver = new ChromeDriver()
