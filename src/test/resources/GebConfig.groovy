@@ -5,7 +5,6 @@ import org.openqa.selenium.firefox.FirefoxProfile
 import org.openqa.selenium.phantomjs.PhantomJSDriver
 import org.openqa.selenium.remote.DesiredCapabilities
 
-//import org.openqa.selenium.phantomjs.PhantomJSDriver
 reportsDir = "target/test-reports/geb"
 
 driver = {
