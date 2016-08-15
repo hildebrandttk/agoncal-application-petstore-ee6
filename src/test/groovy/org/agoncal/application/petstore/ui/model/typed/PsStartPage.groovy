@@ -6,7 +6,7 @@ class PsStartPage extends Page {
    static url = "http://localhost:8181/petstoreee6"
 
    static at = {
-      title == "YAPS PetStore"
+      waitFor('init', {title == "YAPS PetStore"})
    }
 
    static content = {

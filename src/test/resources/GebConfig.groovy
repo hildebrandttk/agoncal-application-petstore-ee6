@@ -44,6 +44,10 @@ waiting {
          timeout = 3
          retryInterval = 0.5
       }
+      test {
+         init = 10
+         retryInterval = 0.25
+      }
    }
 }
 
